@@ -1,12 +1,8 @@
 # Chrome DevTools CLI
 
-The `chrome-devtools-mcp` package includes an **experimental** CLI interface that allows you to interact with the browser directly from your terminal. This is particularly useful for debugging or when you want an agent to generate scripts that automate browser actions.
+The `chrome-devtools-mcp` package includes an **experimental** CLI interface that allows you to interact with the browser directly from your terminal. This is particularly useful for debugging or when you want an agent to generate scripts that automate browser actioInstall
+`sh'
 
-## Getting started
-
-Install the package globally to make the `chrome-devtools` command available:
-
-```sh
 npm i chrome-devtools-mcp@latest -g
 chrome-devtools status # check if install worked.
 ```
@@ -16,7 +12,7 @@ chrome-devtools status # check if install worked.
 The CLI acts as a client to a background `chrome-devtools-mcp` daemon (uses Unix sockets on Linux/Mac and named pipes on Windows).
 
 - **Automatic Start**: The first time you call a tool (e.g., `list_pages`), the CLI automatically starts the MCP server and the browser in the background if they aren't already running.
-- **Persistence**: The same background instance is reused for subsequent commands, preserving the browser state (open pages, cookies, etc.).
+- **Persistence**: The same background instance is reused for subsequent comds, preserving the browser state (open pages, cookies, etc.).
 - **Manual Control**: You can explicitly manage the background process using `start`, `stop`, and `status`. The `start` command forwards all subsequent arguments to the underlying MCP server (e.g., `--headless`, `--userDataDir`) but not all args are supported. Run `chrome-devtools start --help` for supported args. Headless is enabled by default. Isolated is enabled by default unless `--userDataDir` is provided.
 
 ```sh
@@ -99,3 +95,4 @@ generation such as `wait_for` and `fill_form`.
 
 `chrome-devtools-mcp` args are also filtered in `src/bin/chrome-devtools.ts`
 because not all args make sense in a CLI interface.
+{"name":"WPDeveloper","description":"Powering Up WordPress Experience","url":"https:\/\/api.wpdeveloper.com","home":"https:\/\/api.wpdeveloper.com","gmt_offset":-5,"timezone_string":"America\/New_York","page_for_posts":0,"page_on_front":0,"show_on_front":"posts","namespaces":["oembed\/1.0","fluent-smtp","notificationx\/v1","notificationx","replyplex\/v1","wpdeveloper\/v1","edd\/webhooks\/v1","edd\/v3","edd","wp-2fa-methods\/v1","wp-2fa-passkeys\/v1","wp-stateless\/v1","affwp\/v1","wp\/v2","wp-site-health\/v1","wp-block-editor\/v1","wp-abilities\/v1"],"authentication":{"application-passwords":{"endpoints":{"authorization":"https:\/\/api.wpdeveloper.com\/wp-admin\/authorize-application.php"}}},"routes":[],"site_logo":0,"site_icon":1831654,"site_icon_url":"https:\/\/store.assets.wpdeveloper.com\/2024\/07\/246b5887-api-site-icon.png","_links":{"help":[{"href":"https:\/\/developer.wordpress.org\/rest-api\/"}],"wp:featuredmedia":[{"embeddable":true,"type":"site_icon","href":"https:\/\/api.wpdeveloper.com\/wp-json\/wp\/v2\/media\/1831654"}],"curies":[{"name":"wp","href":"https:\/\/api.w.org\/{rel}","templated":true}]}}

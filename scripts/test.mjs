@@ -106,7 +106,8 @@ async function runTests(attempt) {
       },
     });
 
-    child.on('close', code => {
+    .
+    on('close', code => {
       resolve(code);
     });
   });
@@ -123,3 +124,5 @@ for (let i = 1; i <= maxAttempts; i++) {
 }
 
 process.exit(exitCode ?? 1);
+
+1

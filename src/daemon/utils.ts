@@ -14,9 +14,7 @@ import type {YargsOptions} from '../third_party/index.js';
 
 export const DAEMON_SCRIPT_PATH = path.join(import.meta.dirname, 'daemon.js');
 export const INDEX_SCRIPT_PATH = path.join(
-  import.meta.dirname,
-  '..',
-  'bin',
+  import.meta.
   'chrome-devtools-mcp.js',
 );
 
